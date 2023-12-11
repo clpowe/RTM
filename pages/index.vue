@@ -1,37 +1,84 @@
 <template>
-	<main>
+	<main class="content-grid flow">
 		<h1>Revealing Truth Ministies</h1>
 		<article>
 			<h2>Recent Sermon</h2>
-			<iframe
-				width="560"
-				height="315"
-				src="https://www.youtube.com/embed/mXtx0s7dQ-s?si=aWgHj7o5zPBd02fp"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				allowfullscreen
-			></iframe>
+			<div class="cont">
+				<iframe
+					class="video"
+					src="https://www.youtube.com/embed/mXtx0s7dQ-s?si=aWgHj7o5zPBd02fp"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen
+				></iframe>
+			</div>
 		</article>
-		<article>
+		<article class="flow">
 			<h2>Locations</h2>
-			<div>
-				<h3>Tampa</h3>
-				<p>Address</p>
-				<h4>Times</h4>
-				<p>Sunday</p>
+			<div class="space-y-2">
+				<div>
+					<h3>Tampa</h3>
+					<p>Pastors Bryan & Rashida Powe</p>
+				</div>
+				<div>
+					<h4 font="bold">Address</h4>
+					<p>5201 N. Armenia Ave. Tampa, FL 33603</p>
+				</div>
+				<div class="space-y-2 leading-none">
+					<h4 font="bold">Times</h4>
+					<div class="flex">
+						<p font="bold">Sunday:</p>
+						<p>9:00 am</p>
+					</div>
+					<div class="flex">
+						<p font="bold">Sunday:</p>
+						<p>11:00 am</p>
+					</div>
+					<div class="flex">
+						<p font="bold">Wednesday:</p>
+						<p>7:00 pm</p>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h3>St Pete</h3>
-				<p>Address</p>
-				<h4>Times</h4>
-				<p>Sunday</p>
+			<div class="space-y-2">
+				<div>
+					<h3>St Pete</h3>
+					<p>Pastors Lamar & Yeneka Mills</p>
+				</div>
+				<div>
+					<h4 font="bold">Address</h4>
+					<p>2644 Cypress Ridge Blvd., Wesley Chapel, FL 33544</p>
+				</div>
+				<div>
+					<h4>Times</h4>
+					<div class="flex">
+						<p font="bold">Sunday</p>
+						-
+						<p>11:00 am</p>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h3>Wesley Chaple</h3>
-				<p>Address</p>
-				<h4>Times</h4>
-				<p>Sunday</p>
+			<div class="space-y-2">
+				<div>
+					<h3>Wesley Chaple</h3>
+					<p>Pastors Benjamin & Greta Smith</p>
+				</div>
+				<div>
+					<h4 font="bold">Address</h4>
+					<p>
+						Bay Village Shopping Center, 2220 62nd Ave S, St. Petersburg, FL
+						33712
+					</p>
+				</div>
+				<div>
+					<h4 font="bold">Times</h4>
+					<div class="flex">
+						<p font="bold">Sunday</p>
+						-
+						<p>9:00 am</p>
+					</div>
+				</div>
 			</div>
 		</article>
 	</main>
@@ -39,4 +86,19 @@
 
 <script setup lang="ts"></script>
 
-<style scoped></style>
+<style scoped>
+	.cont {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56.25%;
+	}
+
+	.video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
