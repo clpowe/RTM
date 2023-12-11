@@ -139,7 +139,7 @@
 		text-transform: uppercase;
 	}
 	h4 {
-		font-size: var(--fs-400);
+		font-size: var(--fs-500);
 		line-height: 0.9;
 		text-wrap: balance;
 	}
