@@ -173,9 +173,4 @@
 	.flow > * + * {
 		margin-top: var(--flow-spacing, 1em);
 	}
-
-	.teacher {
-		max-width: 500px;
-		width: 100%;
-	}
 </style>

@@ -1,6 +1,13 @@
 <template>
-	<main class="content-grid flow">
-		<h1>Revealing Truth Ministies</h1>
+	<main class="content-grid space-y-12">
+		<div>
+			<h1>Revealing Truth Ministies</h1>
+			<p text="base" class="max-w-[70ch]">
+				...I will lay upon it health and healing, and I will cure them and will
+				reveal to them the abundance of peace (prosperity, security, stability)
+				and truth.
+			</p>
+		</div>
 		<article>
 			<h2>Recent Sermon</h2>
 			<div class="cont">
@@ -14,7 +21,7 @@
 				></iframe>
 			</div>
 		</article>
-		<article class="flow">
+		<article class="flow space-y-8">
 			<h2>Locations</h2>
 			<div class="space-y-2">
 				<div>
@@ -74,8 +81,8 @@
 				<div>
 					<h4 font="bold">Times</h4>
 					<div class="flex">
-						<p font="bold">Sunday</p>
-						-
+						<p font="bold">Sunday:</p>
+
 						<p>9:00 am</p>
 					</div>
 				</div>
@@ -84,7 +91,33 @@
 	</main>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+	useSeoMeta({
+		title: 'Revealing Truth Ministries',
+		description: '[description]',
+		ogTitle: '[og:title]',
+		ogDescription: '[og:description]',
+		ogImage: '[og:image]',
+		ogUrl: '[og:url]',
+		twitterTitle: '[twitter:title]',
+		twitterDescription: '[twitter:description]',
+		twitterImage: '[twitter:image]',
+		twitterCard: 'summary'
+	})
+
+	useHead({
+		htmlAttrs: {
+			lang: 'en'
+		},
+		link: [
+			{
+				rel: 'icon',
+				type: 'image/png',
+				href: '/favicon.png'
+			}
+		]
+	})
+</script>
 
 <style scoped>
 	.cont {
