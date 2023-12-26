@@ -9,6 +9,10 @@
 </template>
 
 <style>
+	html {
+		min-height: 80px;
+	}
+
 	.content-grid {
 		--padding-inline: 2rem;
 		--content-max-width: 70ch;

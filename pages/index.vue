@@ -1,7 +1,7 @@
 <template>
 	<main class="content-grid space-y-12">
 		<div>
-			<h1>Revealing Truth Ministies</h1>
+			<h1 class="homeHeader">Revealing <span>Truth</span> Ministies</h1>
 			<p text="base" class="max-w-[70ch]">
 				...I will lay upon it health and healing, and I will cure them and will
 				reveal to them the abundance of peace (prosperity, security, stability)
@@ -120,6 +120,10 @@
 </script>
 
 <style scoped>
+	.homeHeader {
+		font-size: clamp(2.8rem, calc(3rem + 4.74vw), 8rem);
+		line-height: 0.8em;
+	}
 	.cont {
 		position: relative;
 		width: 100%;

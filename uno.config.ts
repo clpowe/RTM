@@ -4,11 +4,13 @@ import {
 	presetTypography,
 	presetUno,
 	presetAttributify,
-	presetWebFonts
+	presetWebFonts,
+	presetIcons
 } from 'unocss'
 
 export default defineConfig({
 	presets: [
+		presetIcons(),
 		presetAttributify(), // required when using attributify mode
 		presetUno(), // required
 		presetTypography(),

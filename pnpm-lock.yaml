@@ -16,12 +16,21 @@ dependencies:
     version: 10.7.0(nuxt@3.8.2)(vue@3.3.11)
 
 devDependencies:
+  '@iconify-json/carbon':
+    specifier: ^1.1.27
+    version: 1.1.27
+  '@iconify-json/mdi':
+    specifier: ^1.1.63
+    version: 1.1.63
   '@nuxt/devtools':
     specifier: latest
     version: 1.0.5(nuxt@3.8.2)(vite@4.5.1)
   '@unocss/nuxt':
     specifier: ^0.58.0
     version: 0.58.0(postcss@8.4.32)(vite@4.5.1)(webpack@5.89.0)
+  '@unocss/preset-icons':
+    specifier: ^0.58.0
+    version: 0.58.0
   '@unocss/preset-typography':
     specifier: ^0.58.0
     version: 0.58.0
@@ -810,11 +819,23 @@ packages:
       vue: 3.3.11
     dev: false
 
+  /@iconify-json/carbon@1.1.27:
+    resolution: {integrity: sha512-tJVXv9+D9cjU5HcaY+8J0awv9AL/Mjo9MWR/fxHfHFPP/iokjPBEgq4jOBDGNe8W0k/BTrVI3zpgZjLoi6RNGg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/heroicons@1.1.15:
     resolution: {integrity: sha512-UUBdRuU23MZ5PL5t8EZwHeId4Usdc+FrsukzdAW9xe/0wYLr25+MuqZcIGJZbSxJVukvy3Jgc0sPzBOG1EC7YQ==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
+
+  /@iconify-json/mdi@1.1.63:
+    resolution: {integrity: sha512-b07dRM5LYdwJqd/lm+1+JDNDNSWHvpZ7ujb73oJxx3lmK1J0giDS0BSc4yia0hixNV0Z2q/4GyxAu/A8XqDnbg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify/collections@1.0.367:
     resolution: {integrity: sha512-BLdt/i0ikrCdZxgw1pkTlU7L/RK0vzmlEEbLxQSx205ObsACMPd7z/+HMCrNikQBixVDTg1rR/0mNExpBry2eA==}
