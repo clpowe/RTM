@@ -1,27 +1,42 @@
 <template>
-	<main class="content-grid space-y-12">
-		<div>
-			<h1 class="homeHeader">Revealing <span>Truth</span> Ministies</h1>
-			<p text="base" class="max-w-[70ch]">
-				...I will lay upon it health and healing, and I will cure them and will
-				reveal to them the abundance of peace (prosperity, security, stability)
-				and truth.
-			</p>
-		</div>
-		<article>
-			<h2>Recent Sermon</h2>
+	<main class="content-grid">
+		<article space-y="3 md:16" py="12 md:16">
+			<div flex gap-4 max-w-lg uppercase mx-auto>
+				<p grow whitespace-nowrap>Bryan Powe</p>
+				<UDivider
+					class=""
+					:ui="{ border: { size: { horizontal: 'border-t-3' } } }"
+				/>
+				<p grow whitespace-nowrap>Sun 12.25.2023</p>
+			</div>
+			<h2 class="homeHeader" text-center text="left sm:center">
+				You’re going to laugh
+			</h2>
+
 			<div class="cont">
 				<iframe
 					class="video"
 					src="https://www.youtube.com/embed/mXtx0s7dQ-s?si=aWgHj7o5zPBd02fp"
 					title="YouTube video player"
-					frameborder="0"
+					frameborder="1"
+					color="white"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					allowfullscreen
+					controls="0"
 				></iframe>
 			</div>
 		</article>
-		<article class="flow space-y-8">
+		<section class="full-width bg-black" py="12 md:16">
+			<div class="content-grid max-w-[60ch]" text="white" py-16 mx-auto>
+				<p italic text="xl center">
+					...I will lay upon it health and healing, and I will cure them and
+					will reveal to them the abundance of peace (prosperity, security,
+					stability) and truth.
+				</p>
+				<p text="2xl center" mt-4 font-bold>Jeremiah 33:6 (AMP)</p>
+			</div>
+		</section>
+		<article class="flow space-y-8" py="12 md:16">
 			<h2>Locations</h2>
 			<div class="space-y-2">
 				<div>
@@ -121,8 +136,9 @@
 
 <style scoped>
 	.homeHeader {
-		font-size: clamp(2.8rem, calc(3rem + 4.74vw), 8rem);
+		font-size: clamp(2rem, calc(1rem + 10vw), 7rem);
 		line-height: 0.8em;
+		font-weight: 900;
 	}
 	.cont {
 		position: relative;

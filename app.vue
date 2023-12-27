@@ -1,5 +1,11 @@
 <script setup>
 	import '@unocss/reset/tailwind-compat.css'
+
+	const isDark = usePreferredDark()
+	console.log(isDark.value)
+	const favicon = computed(() => (isDark.value ? 'dark.svg' : 'light.svg'))
+
+	useFavicon(favicon)
 </script>
 
 <template>
@@ -55,8 +61,6 @@
 	}
 
 	:root {
-		--color-scheme: dark;
-
 		--font-family: 'Inter', sans-serif;
 
 		--fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
