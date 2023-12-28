@@ -1,0 +1,10 @@
+{
+	"name": " Tampa Campus",
+	"pastors": "Pastors Bryan & Rashida Powe",
+	"address": "5201 N. Armenia Ave. Tampa, FL 33603",
+	"service_times": {
+		"sunday": "9:00 am",
+		"sunday2": "11:00 am",
+		"wednesday": "7:00 pm"
+	}
+}

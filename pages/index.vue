@@ -1,6 +1,6 @@
 <template>
 	<main class="content-grid">
-		<article space-y="3 md:16" py="12 md:16">
+		<article space-y="3 md:10" py="12 md:16">
 			<div flex gap-4 max-w-lg uppercase mx-auto>
 				<p grow whitespace-nowrap>Bryan Powe</p>
 				<UDivider
@@ -12,7 +12,6 @@
 			<h2 class="homeHeader" text-center text="left sm:center">
 				You’re going to laugh
 			</h2>
-
 			<div class="cont">
 				<iframe
 					class="video"
@@ -109,13 +108,16 @@
 <script setup lang="ts">
 	useSeoMeta({
 		title: 'Revealing Truth Ministries',
-		description: '[description]',
-		ogTitle: '[og:title]',
-		ogDescription: '[og:description]',
+		description:
+			'We are Revealing Truth Ministries - Where lives are changed, communities are impacted and Christ is put on display through the Simple Truth of God’s Word.',
+		ogTitle: 'Revealing Truth Ministries',
+		ogDescription:
+			'We are Revealing Truth Ministries - Where lives are changed, communities are impacted and Christ is put on display through the Simple Truth of God’s Word.',
 		ogImage: '[og:image]',
 		ogUrl: '[og:url]',
-		twitterTitle: '[twitter:title]',
-		twitterDescription: '[twitter:description]',
+		twitterTitle: 'Revealing Truth Ministries',
+		twitterDescription:
+			'We are Revealing Truth Ministries - Where lives are changed, communities are impacted and Christ is put on display through the Simple Truth of God’s Word.',
 		twitterImage: '[twitter:image]',
 		twitterCard: 'summary'
 	})
