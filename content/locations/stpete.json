@@ -5,6 +5,10 @@
 	"service_times": [
 		{
 			"day": "Sunday",
+			"time": "9:00 am"
+		},
+		{
+			"day": "Sunday",
 			"time": "11:00 am"
 		}
 	]
