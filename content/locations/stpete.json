@@ -2,7 +2,10 @@
 	"name": "ST PETE campus",
 	"pastors": "Pastors Lamar & Yeneka Mills",
 	"address": "Bay Village Shopping Center, 2220 62nd Ave S, St. Petersburg, FL 33712",
-	"service_times": {
-		"sunday": "11:00 am"
-	}
+	"service_times": [
+		{
+			"day": "Sunday",
+			"time": "11:00 am"
+		}
+	]
 }

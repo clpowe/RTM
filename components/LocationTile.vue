@@ -1,0 +1,43 @@
+<script setup lang="ts">
+	type Location = {
+		_path: string
+		_dir: string
+		_draft: boolean
+		_partial: boolean
+		_locale: string
+		name: string
+		pastors: string
+		address: string
+		service_times: object
+		id: string
+		_type: string
+		title: string
+		_source: string
+		_file: string
+		_extension: string
+	}
+
+	defineProps<{
+		location: Location
+	}>()
+</script>
+
+<template>
+	<div class="space-y-2">
+		<div>
+			<h3>{{ location.name }}</h3>
+			<p>{{ location.pastors }}</p>
+		</div>
+		<div>
+			<h4 font="bold">Address</h4>
+			<p>{{ location.address }}</p>
+		</div>
+		<div class="space-y-2 leading-none">
+			<h4 font="bold">Times</h4>
+
+			<div v-for="service in location.service_times">
+				{{ service['day'] }} - {{ service['time'] }}
+			</div>
+		</div>
+	</div>
+</template>

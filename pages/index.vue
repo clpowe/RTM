@@ -37,69 +37,8 @@
 		</section>
 		<article class="flow space-y-8" py="12 md:16">
 			<h2>Locations</h2>
-			<div class="space-y-2">
-				<div>
-					<h3>Tampa</h3>
-					<p>Pastors Bryan & Rashida Powe</p>
-				</div>
-				<div>
-					<h4 font="bold">Address</h4>
-					<p>5201 N. Armenia Ave. Tampa, FL 33603</p>
-				</div>
-				<div class="space-y-2 leading-none">
-					<h4 font="bold">Times</h4>
-					<div class="flex">
-						<p font="bold">Sunday:</p>
-						<p>9:00 am</p>
-					</div>
-					<div class="flex">
-						<p font="bold">Sunday:</p>
-						<p>11:00 am</p>
-					</div>
-					<div class="flex">
-						<p font="bold">Wednesday:</p>
-						<p>7:00 pm</p>
-					</div>
-				</div>
-			</div>
-			<div class="space-y-2">
-				<div>
-					<h3>St Pete</h3>
-					<p>Pastors Lamar & Yeneka Mills</p>
-				</div>
-				<div>
-					<h4 font="bold">Address</h4>
-					<p>2644 Cypress Ridge Blvd., Wesley Chapel, FL 33544</p>
-				</div>
-				<div>
-					<h4>Times</h4>
-					<div class="flex">
-						<p font="bold">Sunday</p>
-						-
-						<p>11:00 am</p>
-					</div>
-				</div>
-			</div>
-			<div class="space-y-2">
-				<div>
-					<h3>Wesley Chaple</h3>
-					<p>Pastors Benjamin & Greta Smith</p>
-				</div>
-				<div>
-					<h4 font="bold">Address</h4>
-					<p>
-						Bay Village Shopping Center, 2220 62nd Ave S, St. Petersburg, FL
-						33712
-					</p>
-				</div>
-				<div>
-					<h4 font="bold">Times</h4>
-					<div class="flex">
-						<p font="bold">Sunday:</p>
-
-						<p>9:00 am</p>
-					</div>
-				</div>
+			<div v-for="location in data">
+				<LocationTile :location="location" />
 			</div>
 		</article>
 	</main>
@@ -134,6 +73,10 @@
 			}
 		]
 	})
+
+	const { data } = await useAsyncData('locations', () =>
+		queryContent('/locations').find()
+	)
 </script>
 
 <style scoped>
