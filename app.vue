@@ -20,7 +20,7 @@
 	}
 
 	.content-grid {
-		--padding-inline: 2rem;
+		--padding-inline: 1rem;
 		--content-max-width: 70ch;
 		--breakout-max-width: 85ch;
 

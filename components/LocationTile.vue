@@ -8,13 +8,18 @@
 		name: string
 		pastors: string
 		address: string
-		service_times: object
-		id: string
+		service_times: ServiceTime[]
+		_id: string
 		_type: string
 		title: string
 		_source: string
 		_file: string
 		_extension: string
+	}
+
+	type ServiceTime = {
+		day: string
+		time: string
 	}
 
 	defineProps<{

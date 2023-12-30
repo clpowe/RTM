@@ -1,22 +1,30 @@
 <template>
 	<main class="content-grid">
 		<article space-y="3 md:10" py="12 md:16">
-			<div flex gap-4 max-w-lg uppercase mx-auto>
-				<p grow whitespace-nowrap>Bryan Powe</p>
+			<div
+				flex
+				flex-col
+				sm:flex-row
+				gap-0
+				sm:gap-4
+				max-w-lg
+				uppercase
+				mx-auto
+				text-center
+			>
+				<p grow whitespace-nowrap>An RTM Production</p>
 				<UDivider
-					class=""
+					class="hidden sm:flex"
 					:ui="{ border: { size: { horizontal: 'border-t-3' } } }"
 				/>
-				<p grow whitespace-nowrap>Sun 12.25.2023</p>
+				<p grow whitespace-nowrap>Sun 12.24.2023</p>
 			</div>
-			<h2 class="homeHeader" text-center text="left sm:center">
-				You’re going to laugh
-			</h2>
+			<h2 editable class="homeHeader" text-center>No Jesus, No Christmas</h2>
 			<div class="cont">
 				<iframe
 					class="video"
-					src="https://www.youtube.com/embed/mXtx0s7dQ-s?si=aWgHj7o5zPBd02fp"
-					title="YouTube video player"
+					src="https://www.youtube.com/embed/dXsCw_ED5iY?si=-XTHALO95TGmnGag"
+					title="No Jesus, No Christmas"
 					frameborder="1"
 					color="white"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -74,6 +82,29 @@
 		]
 	})
 
+	type Location = {
+		_path: string
+		_dir: string
+		_draft: boolean
+		_partial: boolean
+		_locale: string
+		name: string
+		pastors: string
+		address: string
+		service_times: ServiceTime[]
+		_id: string
+		_type: string
+		title: string
+		_source: string
+		_file: string
+		_extension: string
+	}
+
+	type ServiceTime = {
+		day: string
+		time: string
+	}
+
 	const { data } = await useAsyncData('locations', () =>
 		queryContent('/locations').find()
 	)
@@ -81,9 +112,10 @@
 
 <style scoped>
 	.homeHeader {
-		font-size: clamp(2rem, calc(1rem + 10vw), 7rem);
-		line-height: 0.8em;
+		font-size: clamp(1.5rem, calc(0.5rem + 8vw), 7rem);
+		line-height: 1em;
 		font-weight: 900;
+		text-wrap: balance;
 	}
 	.cont {
 		position: relative;

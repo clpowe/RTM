@@ -19,6 +19,9 @@ dependencies:
     version: 10.7.0(nuxt@3.8.2)(vue@3.3.11)
 
 devDependencies:
+  '@iconify-json/bxl':
+    specifier: ^1.1.10
+    version: 1.1.10
   '@iconify-json/carbon':
     specifier: ^1.1.27
     version: 1.1.27
@@ -43,6 +46,9 @@ devDependencies:
   nuxt:
     specifier: ^3.8.2
     version: 3.8.2(vite@4.5.1)
+  nuxt-svgo:
+    specifier: ^3.7.0
+    version: 3.7.0
   vue:
     specifier: ^3.3.10
     version: 3.3.11
@@ -821,6 +827,12 @@ packages:
     dependencies:
       vue: 3.3.11
     dev: false
+
+  /@iconify-json/bxl@1.1.10:
+    resolution: {integrity: sha512-/+9L0XBI7vvP8tU2NVfqr45BjUndbTEaDuU6PERn9zKH0Rtsi9GDpaba7FY8PgA91ugGIpuwUPsFLCofkYreNg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify-json/carbon@1.1.27:
     resolution: {integrity: sha512-tJVXv9+D9cjU5HcaY+8J0awv9AL/Mjo9MWR/fxHfHFPP/iokjPBEgq4jOBDGNe8W0k/BTrVI3zpgZjLoi6RNGg==}
@@ -5333,7 +5345,6 @@ packages:
   /mini-svg-data-uri@1.4.4:
     resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
     hasBin: true
-    dev: false
 
   /minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
@@ -5764,6 +5775,29 @@ packages:
       - vite
       - vue
     dev: false
+
+  /nuxt-svgo@3.7.0:
+    resolution: {integrity: sha512-WXCUvtla4wDMHlpsNVBefTjpFZid7479oduoU57ixIfqVFo57vhOl50jTNomvLxmRgTrV0qOcNzyQNWzRIuUvA==}
+    peerDependencies:
+      svgo-loader: ^4.0.0
+      vue-loader: ^17.0.0
+      vue-svg-loader: 0.17.0-beta.2
+    peerDependenciesMeta:
+      svgo-loader:
+        optional: true
+      vue-loader:
+        optional: true
+      vue-svg-loader:
+        optional: true
+    dependencies:
+      '@nuxt/kit': 3.8.2
+      '@vue/compiler-sfc': 3.3.11
+      mini-svg-data-uri: 1.4.4
+      svgo: 3.0.5
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
 
   /nuxt@3.8.2(vite@4.5.1):
     resolution: {integrity: sha512-HUAyifmqTs2zcQBGvcby3KNs2pBAk+l7ZbLjD1oCNqQQ+wBuZ1qgLC4Ebu++y4g3o3Y8WAWSvpafbKRLQZziPw==}
