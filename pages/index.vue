@@ -12,19 +12,20 @@
 				mx-auto
 				text-center
 			>
-				<p grow whitespace-nowrap>An RTM Production</p>
+				<p grow whitespace-nowrap class="editable">An RTM Production</p>
 				<UDivider
-					class="hidden sm:flex"
+					class="hidden sm:flex editable"
 					:ui="{ border: { size: { horizontal: 'border-t-3' } } }"
 				/>
-				<p grow whitespace-nowrap>Sun 12.24.2023</p>
+				<p grow whitespace-nowrap class="editable">Sun 12.24.2023</p>
 			</div>
-			<h2 editable class="homeHeader" text-center>No Jesus, No Christmas</h2>
+			<h2 class="homeHeader" text-center>{{ fv![0].title }}</h2>
+
 			<div class="cont">
 				<iframe
 					class="video"
-					src="https://www.youtube.com/embed/dXsCw_ED5iY?si=-XTHALO95TGmnGag"
-					title="No Jesus, No Christmas"
+					:src="fv![0].source"
+					:title="fv![0].title"
 					frameborder="1"
 					color="white"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -34,17 +35,24 @@
 			</div>
 		</article>
 		<section class="full-width bg-black" py="12 md:16">
-			<div class="content-grid max-w-[60ch]" text="white" py-16 mx-auto>
+			<div
+				class="content-grid max-w-[60ch] editable"
+				text="white"
+				py-16
+				mx-auto
+			>
 				<p italic text="xl center">
 					...I will lay upon it health and healing, and I will cure them and
 					will reveal to them the abundance of peace (prosperity, security,
 					stability) and truth.
 				</p>
-				<p text="2xl center" mt-4 font-bold>Jeremiah 33:6 (AMP)</p>
+				<p text="2xl center" mt-4 font-bold class="editable">
+					Jeremiah 33:6 (AMP)
+				</p>
 			</div>
 		</section>
 		<article class="flow space-y-8" py="12 md:16">
-			<h2>Locations</h2>
+			<h2 class="editable">Locations</h2>
 			<div v-for="location in data">
 				<LocationTile :location="location" />
 			</div>
@@ -82,32 +90,13 @@
 		]
 	})
 
-	type Location = {
-		_path: string
-		_dir: string
-		_draft: boolean
-		_partial: boolean
-		_locale: string
-		name: string
-		pastors: string
-		address: string
-		service_times: ServiceTime[]
-		_id: string
-		_type: string
-		title: string
-		_source: string
-		_file: string
-		_extension: string
-	}
-
-	type ServiceTime = {
-		day: string
-		time: string
-	}
-
 	const { data } = await useAsyncData('locations', () =>
 		queryContent('/locations').find()
 	)
+	const { data: fv } = await useAsyncData('featuredVideo', () =>
+		queryContent('/featured').find()
+	)
+	console.log(fv.value)
 </script>
 
 <style scoped>
