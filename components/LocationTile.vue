@@ -28,21 +28,32 @@
 </script>
 
 <template>
-	<div class="space-y-2">
+	<figure class="card bg-slate-100 p-4 rounded-xl">
 		<div>
-			<h3>{{ location.name }}</h3>
-			<p>{{ location.pastors }}</p>
+			<h3 text-2xl>{{ location.name }}</h3>
+			<!-- <p>{{ location.pastors }}</p> -->
 		</div>
 		<div>
-			<h4 font="bold">Address</h4>
+			<!-- <h4 font="bold">Address</h4> -->
 			<p>{{ location.address }}</p>
 		</div>
 		<div class="space-y-2 leading-none">
-			<h4 font="bold">Times</h4>
+			<h5 text-xl font="bold">Times</h5>
 
 			<div v-for="service in location.service_times">
-				{{ service['day'] }} - {{ service['time'] }}
+				<p>
+					<span font="bold">
+						{{ service['day'] }}
+					</span>
+					- {{ service['time'] }}
+				</p>
 			</div>
 		</div>
-	</div>
+	</figure>
 </template>
+
+<style lang="scss" scoped>
+	.card {
+		display: grid;
+	}
+</style>

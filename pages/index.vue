@@ -51,11 +51,11 @@
 				</p>
 			</div>
 		</section>
-		<article class="flow space-y-8" py="12 md:16">
-			<h2 class="editable">Locations</h2>
-			<div v-for="location in data">
-				<LocationTile :location="location" />
-			</div>
+		<article class="breakout" py="12 md:16 ">
+			<h2 class="editable" mb-4>Locations</h2>
+			<MediaScroller>
+				<LocationTile :location="location" v-for="location in data" />
+			</MediaScroller>
 		</article>
 	</main>
 </template>
@@ -96,7 +96,6 @@
 	const { data: fv } = await useAsyncData('featuredVideo', () =>
 		queryContent('/featured').find()
 	)
-	console.log(fv.value)
 </script>
 
 <style scoped>
