@@ -1,5 +1,6 @@
 <script setup>
 	import '@unocss/reset/tailwind-compat.css'
+	import 'virtual:uno.css'
 
 	const isDark = usePreferredDark()
 
