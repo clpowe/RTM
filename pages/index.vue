@@ -51,7 +51,7 @@
 				</p>
 			</div>
 		</section>
-		<article class="breakout" py="12 md:16 ">
+		<article class="" py="12 md:16 ">
 			<h2 class="editable" mb-4>Locations</h2>
 			<MediaScroller>
 				<LocationTile :location="location" v-for="location in data" />

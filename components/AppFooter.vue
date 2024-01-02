@@ -5,13 +5,13 @@
 </script>
 
 <template>
-	<footer class="content-grid bg-black p-4" text="white">
-		<div flex flex-col items-center justify-between>
-			<div flex flex-col sm:flex-row items="center" gap-2>
-				<LogoLight text-4xl mb-0 />
+	<footer class="content-grid bg-black py-4" text="white">
+		<div flex flex-wrap items-center justify-between>
+			<div flex flex-wrap items-center>
+				<LogoLight text-4xl />
 				<div>Revealing Truth Ministries {{ date.getFullYear() }}</div>
 			</div>
-			<div flex text-3xl gap-2>
+			<div flex flex-wrap text-4xl gap-4>
 				<div class="i-bxl:facebook-square" text-white></div>
 				<div class="i-bxl:instagram-alt"></div>
 			</div>

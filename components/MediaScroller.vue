@@ -73,7 +73,7 @@
 	}
 	@media (min-width: 1024px) {
 		.media-scroller {
-			grid-auto-columns: 30%;
+			grid-auto-columns: 32%;
 		}
 	}
 

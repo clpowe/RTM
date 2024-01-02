@@ -8,17 +8,17 @@
 				{{ '' }}
 			</NuxtLink>
 			<div class="ml-auto flex gap-4">
-				<UButton
+				<NuxtLink
 					to="https://revealingtruth.online.church/"
 					size="sm"
 					target="_blank"
-					>Watch Live</UButton
+					>Watch Live</NuxtLink
 				>
-				<UButton
+				<NuxtLink
 					to="https://pushpay.com/g/revealingtruth?appVersion=&clickOrigin=&itemId=&utm_medium=social&utm_source=linktree&utm_campaign=giving&ltclid=6bff1693-6209-48cf-92f2-4ad8dc377d3c"
 					target="_blank"
 					size="sm"
-					>Give Now</UButton
+					>Give Now</NuxtLink
 				>
 			</div>
 		</nav>
