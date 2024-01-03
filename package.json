@@ -1,34 +1,36 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@iconify-json/bxl": "^1.1.10",
-    "@iconify-json/carbon": "^1.1.27",
-    "@iconify-json/mdi": "^1.1.63",
-    "@nuxt/devtools": "latest",
-    "@unocss/nuxt": "^0.58.0",
-    "@unocss/preset-icons": "^0.58.0",
-    "@unocss/preset-typography": "^0.58.0",
-    "@unocss/preset-web-fonts": "^0.58.0",
-    "nuxt": "^3.8.2",
-    "nuxt-svgo": "^3.7.0",
-    "vue": "^3.3.10",
-    "vue-router": "^4.2.5"
-  },
-  "dependencies": {
-    "@nuxt/content": "^2.10.0",
-    "@nuxt/ui": "^2.11.0",
-    "@unocss/reset": "^0.58.0",
-    "@vueuse/nuxt": "^10.7.0",
-    "sass": "^1.69.6",
-    "swiper": "^11.0.5"
-  }
+	"name": "nuxt-app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@iconify-json/bxl": "^1.1.10",
+		"@iconify-json/carbon": "^1.1.27",
+		"@iconify-json/mdi": "^1.1.63",
+		"@nuxt/devtools": "latest",
+		"@unocss/nuxt": "^0.58.0",
+		"@unocss/preset-icons": "^0.58.0",
+		"@unocss/preset-typography": "^0.58.0",
+		"@unocss/preset-web-fonts": "^0.58.0",
+		"nuxt": "^3.8.2",
+		"nuxt-svgo": "^3.7.0",
+		"vue": "^3.3.10",
+		"vue-router": "^4.2.5"
+	},
+	"dependencies": {
+		"@nuxt/content": "^2.10.0",
+		"@nuxt/ui": "^2.11.0",
+		"@unocss/reset": "^0.58.0",
+		"@vueuse/nuxt": "^10.7.0",
+		"daisyui": "^3.0.0",
+		"sass": "^1.69.6",
+		"swiper": "^11.0.5",
+		"unocss-preset-daisy": "^7.0.0"
+	}
 }

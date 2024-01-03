@@ -7,6 +7,7 @@ import {
 	presetWebFonts,
 	presetIcons
 } from 'unocss'
+import { presetDaisy } from 'unocss-preset-daisy'
 
 export default defineConfig({
 	presets: [
@@ -14,6 +15,9 @@ export default defineConfig({
 		presetAttributify(), // required when using attributify mode
 		presetUno(), // required
 		presetTypography(),
+		presetDaisy({
+			themes: ['light']
+		}),
 		presetWebFonts({
 			provider: 'bunny',
 			fonts: {
