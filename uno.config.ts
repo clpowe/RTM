@@ -16,7 +16,21 @@ export default defineConfig({
 		presetUno(), // required
 		presetTypography(),
 		presetDaisy({
-			themes: ['light']
+			themes: [
+				{
+					mytheme: {
+						primary: '#2563eb',
+						secondary: '#1e40af',
+						accent: '#D9e021',
+						neutral: '#1f2937',
+						'base-100': '#f3f4f6',
+						info: '#1f2937',
+						success: '#a3e635',
+						warning: '#facc15',
+						error: '#e11d48'
+					}
+				}
+			]
 		}),
 		presetWebFonts({
 			provider: 'bunny',
