@@ -14,7 +14,6 @@
 					<li>
 						<NuxtLink
 							to="https://revealingtruth.online.church/"
-							size="sm"
 							class="btn btn-sm"
 							target="_blank"
 							>Watch Live</NuxtLink
@@ -24,7 +23,6 @@
 						<NuxtLink
 							to="https://pushpay.com/g/revealingtruth?appVersion=&clickOrigin=&itemId=&utm_medium=social&utm_source=linktree&utm_campaign=giving&ltclid=6bff1693-6209-48cf-92f2-4ad8dc377d3c"
 							target="_blank"
-							size="sm"
 							class="btn btn-sm"
 							>Give Now</NuxtLink
 						>
