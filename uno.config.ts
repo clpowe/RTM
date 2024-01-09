@@ -7,7 +7,6 @@ import {
 	presetWebFonts,
 	presetIcons
 } from 'unocss'
-import { presetDaisy } from 'unocss-preset-daisy'
 
 export default defineConfig({
 	presets: [
@@ -15,23 +14,6 @@ export default defineConfig({
 		presetAttributify(), // required when using attributify mode
 		presetUno(), // required
 		presetTypography(),
-		presetDaisy({
-			themes: [
-				{
-					mytheme: {
-						primary: '#2563eb',
-						secondary: '#1e40af',
-						accent: '#D9e021',
-						neutral: '#1f2937',
-						'base-100': '#f3f4f6',
-						info: '#1f2937',
-						success: '#a3e635',
-						warning: '#facc15',
-						error: '#e11d48'
-					}
-				}
-			]
-		}),
 		presetWebFonts({
 			provider: 'bunny',
 			fonts: {
@@ -39,5 +21,43 @@ export default defineConfig({
 				mono: 'Fira Sans'
 			}
 		})
-	]
+	],
+	content: {
+		pipeline: {
+			include: [
+				// the default
+				/\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/,
+				// include js/ts files
+				'src/**/*.{js,ts}',
+				'presets/**/*.{js,vue,ts}'
+			]
+		}
+	},
+	theme: {
+		colors: {
+			'primary-50': 'rgb(var(--primary-50))',
+			'primary-100': 'rgb(var(--primary-100))',
+			'primary-200': 'rgb(var(--primary-200))',
+			'primary-300': 'rgb(var(--primary-300))',
+			'primary-400': 'rgb(var(--primary-400))',
+			'primary-500': 'rgb(var(--primary-500))',
+			'primary-600': 'rgb(var(--primary-600))',
+			'primary-700': 'rgb(var(--primary-700))',
+			'primary-800': 'rgb(var(--primary-800))',
+			'primary-900': 'rgb(var(--primary-900))',
+			'primary-950': 'rgb(var(--primary-950))',
+			'surface-0': 'rgb(var(--surface-0))',
+			'surface-50': 'rgb(var(--surface-50))',
+			'surface-100': 'rgb(var(--surface-100))',
+			'surface-200': 'rgb(var(--surface-200))',
+			'surface-300': 'rgb(var(--surface-300))',
+			'surface-400': 'rgb(var(--surface-400))',
+			'surface-500': 'rgb(var(--surface-500))',
+			'surface-600': 'rgb(var(--surface-600))',
+			'surface-700': 'rgb(var(--surface-700))',
+			'surface-800': 'rgb(var(--surface-800))',
+			'surface-900': 'rgb(var(--surface-900))',
+			'surface-950': 'rgb(var(--surface-950))'
+		}
+	}
 })

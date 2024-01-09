@@ -1,6 +1,7 @@
 <script setup>
 	import '@unocss/reset/tailwind-compat.css'
 	import 'virtual:uno.css'
+	import 'primeicons/primeicons.css'
 
 	const isDark = usePreferredDark()
 
@@ -88,6 +89,30 @@
 		--clr-black-200: hsl(0, 0%, 80%);
 		--clr-black-400: hsl(0, 0%, 40%);
 		--clr-black-500: hsl(0, 0%, 7%);
+
+		--primary-50: 219 240 255;
+		--primary-100: 189 227 255;
+		--primary-200: 117 198 255;
+		--primary-300: 51 170 255;
+		--primary-400: 0 137 235;
+		--primary-500: 0 96 166;
+		--primary-600: 0 77 133;
+		--primary-700: 0 60 102;
+		--primary-800: 0 39 66;
+		--primary-900: 0 21 36;
+		--primary-950: 0 9 15;
+		--surface-0: 255 255 255;
+		--surface-50: 248 250 252;
+		--surface-100: 241 245 249;
+		--surface-200: 226 232 240;
+		--surface-300: 203 213 225;
+		--surface-400: 148 163 184;
+		--surface-500: 100 116 139;
+		--surface-600: 71 85 105;
+		--surface-700: 45 55 72;
+		--surface-800: 30 41 59;
+		--surface-900: 15 23 42;
+		--surface-950: 3 6 23;
 	}
 
 	h1,
