@@ -1,18 +1,23 @@
 <script setup>
 	import LogoLight from '~/assets/logo-light.svg'
 
-	const date = new Date()
+	const formatted = useDateFormat(useNow(), 'YYYY')
 </script>
 
 <template>
-	<div class="content-grid bg-neutral">
-		<footer class="footer p-10 text-neutral-content">
-			<aside class="flex items-center">
-				<LogoLight text-4xl />
-				<p>Revealing Truth Ministries {{ date.getFullYear() }}</p>
-			</aside>
+	<div class="content-grid bg-slate-950 text-white">
+		<footer class="flex justify-between p-10 text-neutral-content">
+			<div>
+				<aside class="flex items-center">
+					<LogoLight text-6xl />
+					<p uppercase>Revealing Truth Ministries</p>
+				</aside>
+				<p text-sm>
+					© {{ formatted }} Revealing Truth Ministries, All rights reserved
+				</p>
+			</div>
 			<nav>
-				<header class="footer-title">Social</header>
+				<header font-bold>Social</header>
 				<div class="grid grid-flow-col gap-4 text-4xl">
 					<a><div class="i-bxl:facebook-square" text-white></div></a>
 					<a><div class="i-bxl:instagram-alt"></div></a>
