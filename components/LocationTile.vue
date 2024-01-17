@@ -29,16 +29,10 @@
 
 <template>
 	<Card>
-		<template #title>
-			<h3>{{ location.name }}</h3>
-		</template>
-		<template #subtitle>
-			<p>{{ location.pastors }}</p>
-		</template>
 		<template #content>
 			<div>
 				<h4 text-xl font="bold">Address</h4>
-				<p class="max-w-[60ch]">{{ location.address }}</p>
+				<p class="max-w-[45ch]">{{ location.address }}</p>
 			</div>
 			<div class="space-y-2 leading-none">
 				<h4 text-xl font="bold">Service Times</h4>

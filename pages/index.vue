@@ -13,10 +13,7 @@
 				text-center
 			>
 				<p grow whitespace-nowrap class="editable">An RTM Production</p>
-				<UDivider
-					class="hidden sm:flex editable"
-					:ui="{ border: { size: { horizontal: 'border-t-3' } } }"
-				/>
+
 				<p grow whitespace-nowrap class="editable">Sun 12.24.2023</p>
 			</div>
 			<h2 class="homeHeader" text-center>{{ fv![0].title }}</h2>
@@ -51,13 +48,31 @@
 				</p>
 			</div>
 		</section>
-		<article></article>
-		<article class="" py="12 md:16 ">
+		<article class="py-20">
 			<h2 class="editable" mb-4>Locations</h2>
+			<Accordion :activeIndex="0" multiple>
+				<template #expandicon>
+					<div class="i-heroicons-plus-circle text-7xl mr-6"></div>
+				</template>
+				<template #collapseicon>
+					<div class="i-heroicons-minus-circle text-7xl mr-6"></div>
+				</template>
+				<AccordionTab v-for="location in data" class="bg-red">
+					<template #header>
+						<div>
+							<h3 class="mb-2">{{ location.name }}</h3>
+							<p class="font-400">{{ location.pastors }}</p>
+						</div>
+					</template>
+					<LocationTile :location="location" />
+				</AccordionTab>
+			</Accordion>
+		</article>
+		<!-- <article class="" py="12 md:16 ">
 			<div grid gap-4>
 				<LocationTile :location="location" v-for="location in data" />
 			</div>
-		</article>
+		</article> -->
 	</main>
 </template>
 
